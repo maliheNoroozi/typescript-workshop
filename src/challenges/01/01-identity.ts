@@ -4,7 +4,7 @@ import type { Equal, Expect } from "../../helpers";
  * The `identity` function takes a value of any type
  * and returns it. Make it generic!
  */
-function identity(a: TODO): TODO {
+function identity<T>(a: T): T {
   return a;
 }
 
