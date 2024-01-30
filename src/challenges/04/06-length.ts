@@ -8,7 +8,7 @@ import { Equal, Expect } from '../../helpers';
  * How would you get the length of an array in JavaScript?
  * The type-level version is very similar :)
  */
-type Length<Tuple extends any[]> = TODO;
+type Length<Tuple extends any[]> = Tuple['length'];
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = Length<[]>;

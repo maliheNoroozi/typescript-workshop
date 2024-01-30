@@ -8,7 +8,7 @@ import { Equal, Expect } from '../../helpers';
  * this is actually the basis of representing
  * numbers and doing arithmetics at the type level!
  */
-type LengthPlusOne<Tuple extends any[]> = TODO;
+type LengthPlusOne<Tuple extends any[]> = [...Tuple, any]['length'];
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = LengthPlusOne<[]>;

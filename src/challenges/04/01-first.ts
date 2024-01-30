@@ -6,7 +6,7 @@ import { Equal, Expect } from '../../helpers';
  *
  * Hint: How would you do it if `Tuple` was a value?
  */
-type First<Tuple extends any[]> = TODO;
+type First<Tuple extends any[]> = Tuple extends [infer F, ...infer Rest] ? F : undefined;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = First<[]>;

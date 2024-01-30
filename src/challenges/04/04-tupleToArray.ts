@@ -4,7 +4,11 @@ import { Equal, Expect } from '../../helpers';
  * Implement a generic taking a tuple and returning
  * an array containing the union of all values in this tuple.
  */
-type TupleToArray<Tuple extends any[]> = TODO;
+type TupleToArray<Tuple extends any[]> = (keyof {
+    [key in Tuple[number]]: undefined
+})[];
+
+
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = TupleToArray<[1, 2, 3]>;

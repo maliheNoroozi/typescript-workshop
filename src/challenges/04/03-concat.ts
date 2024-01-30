@@ -3,7 +3,7 @@ import { Equal, Expect } from '../../helpers';
 /**
  * Implement a generic that concatenates two tuples.
  */
-type Concat<Tuple1 extends any[], Tuple2 extends any[]> = TODO;
+type Concat<Tuple1 extends any[], Tuple2 extends any[]> = [...Tuple1, ...Tuple2];
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = Concat<[1, 2, 3], [4, 5]>;
