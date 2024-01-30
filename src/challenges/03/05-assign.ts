@@ -6,7 +6,7 @@ import { Equal, Expect } from '../../helpers';
  * function that matches the behavior of `{...a, ...b}`,
  * and overrides properties of `A` with properties of `B`?
  */
-type Assign<A, B> = TODO;
+type Assign<A, B> = Omit<A, keyof B> & B;
 
 const assign = <A, B>(obj1: A, obj2: B): Assign<A, B> => ({
   ...obj1,

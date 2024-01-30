@@ -3,7 +3,7 @@ import { Equal, Expect } from '../../helpers';
 /**
  * 2. implement a generic to get the union of all values in an object type.
  */
-type ValueOf<Obj> = TODO;
+type ValueOf<Obj> = Obj[keyof Obj];
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = ValueOf<{ a: number; b: string }>;

@@ -4,7 +4,7 @@ import { Equal, Expect } from '../../helpers';
  * Create a generic that removes the `id` key
  * from an object type.
  */
-type RemoveId<Obj> = TODO;
+type RemoveId<Obj> = Omit<Obj, 'id'>;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = RemoveId<{

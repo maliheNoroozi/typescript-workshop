@@ -3,7 +3,7 @@ import { Equal, Expect } from '../../helpers';
 /**
  * 1. implement a generic to get the union of all keys of an object type.
  */
-type Keys<Obj> = TODO;
+type Keys<Obj> = keyof Obj;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = Keys<{ a: number; b: string }>;

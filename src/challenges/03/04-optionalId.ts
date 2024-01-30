@@ -8,7 +8,7 @@ import { Equal, Expect } from '../../helpers';
 /**           This is called a type constraint.
  *            We'll learn more about them soon.
  *                         👇                      */
-type MakeIdOptional<Obj extends { id: unknown }> = TODO;
+type MakeIdOptional<Obj extends { id: unknown }> = Partial<Pick<Obj, 'id'>> & Omit<Obj, 'id'>;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = MakeIdOptional<{
