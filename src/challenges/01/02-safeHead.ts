@@ -6,7 +6,7 @@ import { Equal, Expect } from "../../helpers";
  * if it isn't empty. Make it generic!
  */
 
-function safeHead(array: TODO[], defaultValue: TODO): TODO {
+function safeHead<T>(array: T[], defaultValue: T): T {
   return array[0] ?? defaultValue;
 }
 
