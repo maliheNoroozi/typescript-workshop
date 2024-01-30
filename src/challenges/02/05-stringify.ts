@@ -4,7 +4,7 @@
  * Don't use `any`!
  */
 
-function stringify(input: TODO) {
+function stringify(input: unknown) {
   return input instanceof Symbol ? input.toString() : `${input}`;
 }
 

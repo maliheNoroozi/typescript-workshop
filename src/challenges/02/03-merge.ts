@@ -6,7 +6,7 @@ import { Equal, Expect } from '../../helpers';
  * with all properties of `A` and `B`.
  * Make it generic!
  */
-function merge(a: TODO, b: TODO): TODO {
+function merge<T, U>(a: T, b: U): T & U {
   return { ...a, ...b };
 }
 

@@ -5,7 +5,7 @@ import { Equal, Expect } from '../../helpers';
  * types and return either one or the other at random.
  * Make  generic!
  */
-function pickOne(a: TODO, b: TODO): TODO {
+function pickOne<T, U>(a: T, b: U): T | U {
   return Math.random() > 0.5 ? a : b;
 }
 
