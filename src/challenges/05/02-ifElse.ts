@@ -5,7 +5,7 @@ import { Equal, Expect } from '../../helpers';
  *  - the 2nd parameter if the 1st one is `true`
  *  - the 3rd parameter if the 1st one is `false`
  */
-type If<Condition, Branch1, Branch2> = TODO;
+type If<Condition, Branch1, Branch2> = Condition extends true ? Branch1: Branch2;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = If<true, string, number>;

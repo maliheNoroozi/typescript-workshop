@@ -4,7 +4,7 @@ import { Equal, Expect } from '../../helpers';
  * Implement a generic that checks if
  * a type is an array.
  */
-type IsArray<T> = TODO;
+type IsArray<T> = T extends any[] ? true : false;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = IsArray<number[]>;

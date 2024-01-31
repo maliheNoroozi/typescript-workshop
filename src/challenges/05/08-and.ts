@@ -10,7 +10,7 @@ import { Equal, Expect } from '../../helpers';
  * Hint: you can check several values at once by wrapping
  *       them in a tuple type (pattern matching).
  */
-type AND<A, B> = TODO;
+type AND<A, B> = A extends false ? false : B extends false ? false : true;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = AND<true, true>;

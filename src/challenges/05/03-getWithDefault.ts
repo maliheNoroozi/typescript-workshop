@@ -10,7 +10,7 @@ import { Equal, Expect } from '../../helpers';
  * Note: The type of the property and the type of the default value
  * can be different.
  */
-type GetWithDefault<Key, Obj, Default> = TODO;
+type GetWithDefault<Key, Obj, Default> = Key extends keyof Obj ? Obj[Key] : Default;
 
 function getWithDefault<K extends string, O extends {}, D>(key: K, obj: O, defaultValue: D): GetWithDefault<K, O, D> {
   return (obj as any)[key] ?? defaultValue;

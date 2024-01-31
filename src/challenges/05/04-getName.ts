@@ -8,7 +8,7 @@ import { Equal, Expect } from '../../helpers';
  *       Don't have a name property, and return
  *       `undefined` in this case.
  */
-type GetName<Input> = TODO;
+type GetName<Input> = 'name' extends keyof Input ? Input['name'] : undefined;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = GetName<{ name: 'Gabriel' }>;

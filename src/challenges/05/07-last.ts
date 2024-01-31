@@ -4,7 +4,7 @@ import { Equal, Expect } from '../../helpers';
  * Implement a generic that extracts
  * the last element of a tuple.
  */
-type Last<Tuple extends any[]> = TODO;
+type Last<Tuple extends any[]> = Tuple extends [...infer First, infer Last] ? Last : never;;
 
 // DO NOT CHANGE THE CODE BELOW
 type res1 = Last<[1, 2, 3]>;
